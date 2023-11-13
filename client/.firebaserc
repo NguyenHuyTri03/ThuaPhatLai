@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "thuaphatlai-58b39": {
+      "hosting": {
+        "client": [
+          "thuaphatlai-58b39"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "thuaphatlai-58b39"
+  }
+}

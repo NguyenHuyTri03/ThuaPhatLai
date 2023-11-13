@@ -1,0 +1,38 @@
+<app-topnav (mobile_menu)="MobileMenu($event)" [scroll_pos]="curr_scroll_pos"></app-topnav>
+
+<div id="container">
+    <div class="quotes">
+        <p>"Justice delayed is Justice denied"</p>
+        <i (click)="ScrollToAbout()" id="scroll-indicator" class="fa-solid fa-chevron-down fa-2xl"></i>
+    </div>
+    
+    <div class="about-overview">
+        <div></div>
+        <div class="about-overview__title grid-row-span-2">
+            <h1>Về chúng tôi</h1>
+            <h2>Văn Phòng thừa</h2>
+            <h2>phát lại quận 6</h2>
+        </div>
+    
+        <hr>
+    
+        <div class="about-overview__content grid-col-span-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac neque sed sapien viverra consectetur. Phasellus tincidunt justo erat, eu condimentum lorem rutrum at. Nam tincidunt quis lectus vel laoreet. Sed nec pellentesque nulla, aliquam pellentesque elit. Sed vel sodales justo. Quisque urna neque, fringilla ac est nec, accumsan ultrices velit. Aenean porttitor lorem metus, nec congue magna volutpat sed. Donec nulla lorem, cursus nec mauris nec, varius vulputate nisl. Nulla accumsan aliquam posuere. Cras luctus sem ac lectus ornare convallis. Nunc iaculis leo justo, et lacinia dui ultricies quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci mauris. Curabitur eget consectetur orci, id efficitur elit. Cras eleifend dolor vitae magna blandit ultrices. Nam in fringilla massa. </p>
+        </div>
+    </div>
+    
+    <div class="services">
+        <div></div>
+        <div class="services__title grid-row-span-2">
+            <h1>Dịch vụ</h1>
+        </div>
+    
+        <hr>
+    
+        <div class="services__content grid-col-span-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac neque sed sapien viverra consectetur. Phasellus tincidunt justo erat, eu condimentum lorem rutrum at. Nam tincidunt quis lectus vel laoreet. Sed nec pellentesque nulla, aliquam pellentesque elit. Sed vel sodales justo. Quisque urna neque, fringilla ac est nec, accumsan ultrices velit. Aenean porttitor lorem metus, nec congue magna volutpat sed. Donec nulla lorem, cursus nec mauris nec, varius vulputate nisl. Nulla accumsan aliquam posuere. Cras luctus sem ac lectus ornare convallis. Nunc iaculis leo justo, et lacinia dui ultricies quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in orci mauris. Curabitur eget consectetur orci, id efficitur elit. Cras eleifend dolor vitae magna blandit ultrices. Nam in fringilla massa. </p>
+        </div>
+    </div>
+</div>
+
+<button (click)="BackToTop()" id="to-top"><i id="up-arrow" class="fa-solid fa-chevron-up fa-xl"></i></button>

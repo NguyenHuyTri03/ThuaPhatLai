@@ -1,0 +1,34 @@
+<div class="container" id="container">
+    <!-- {{scroll_pos}} -->
+    <div class="btn-div btn-div__left">
+        <button id="btn-home" class="btn-div__btn" (click)="WebRouting('home')">Trang chủ</button>
+        <button id="btn-news" class="btn-div__btn" (click)="WebRouting('news')">Tin tức</button>
+    </div>
+
+    <div class="logo-div">
+        <i id="hide" class="hide" class="fa-solid fa-bars fa-xl" style="visibility: hidden;"></i>
+        <img id="logo" src="../../../favicon.ico" alt="logo" (click)="WebRouting('home')">
+        <i id="menu-btn" class="fa-solid fa-bars fa-xl" (click)="ToggleMobileMenu('open')"></i>
+        <p id="large-title" (click)="WebRouting('home')">VĂN PHÒNG THỪA PHÁT LẠI QUẬN 6</p>
+    </div>
+
+    <div class="btn-div btn-div__right">
+        <button id="btn-about" class="btn-div__btn" (click)="WebRouting('about')">Về chúng tôi</button> 
+        <button id="btn-contact" class="btn-div__btn" (click)="WebRouting('contact')">liên hệ</button> 
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__close">
+            <i class="hide" class="fa-solid fa-bars fa-xl" style="visibility: hidden;"></i>
+            <i id="mobile-menu__close--btn" class="fa-solid fa-xmark fa-2xl" (click)="ToggleMobileMenu('close')"></i>
+        </div>
+
+        <div class="mobile-menu__buttons">
+            <button class="mobile-menu__buttons__btn" (click)="WebRouting('home')">Trang chủ</button>
+            <button class="mobile-menu__buttons__btn" (click)="WebRouting('news')">Tin tức</button>
+            <button class="mobile-menu__buttons__btn" (click)="WebRouting('about')">Về chúng tôi</button>
+            <button class="mobile-menu__buttons__btn" (click)="WebRouting('contact')">Liên hệ</button>
+        </div>
+    </div>
+</div>
+<!-- <div id="circle"></div> -->
