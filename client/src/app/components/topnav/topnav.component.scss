@@ -2,14 +2,14 @@
     position: fixed;
     top: 0;
     height: 70px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
 
-    font-family: 'Montserrat';
+    font-family: 'Gabarito';
     color: black;
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -21,15 +21,19 @@
 .btn-div {
     display: none;
 }
+#btn-contact {
+    display: none;
+}
 
 /*logo div*/
 .logo-div {
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 
+    font-family: 'Montserrat', sans-serif;
     transition: all .5s;
     margin: 0;
     padding: 1rem;
@@ -52,8 +56,8 @@
 /*Mobile menu*/
 .mobile-menu {
     position: fixed;
-    height: 0%;
-    width: 100%;
+    height: 0vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,10 +69,11 @@
     color: var(--text-main);
     background-color: var(--bg-main);
     transition: height .4s, opacity .5s;
+    transition-delay: .2s;
 
     &__close {
         height: 70px;        
-        width: 100%;
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,8 +86,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60%;
-        height: 70%;
+        width: 60vw;
+        height: 70vh;
         margin: 10% 0%;
         padding: 0;
 
@@ -94,7 +99,7 @@
             padding: 0;
     
             font-weight: 600;
-            text-transform: uppercase;
+            text-transform: capitalize;
             font-size: 1.4rem;
             background-color: transparent;
             color: var(--text-main);
@@ -103,6 +108,7 @@
     }
 
     #mobile-menu__close--btn {
+        opacity: 0;
         transform: rotate(0deg);
         transition: all .5s;
     }
@@ -143,7 +149,9 @@
 
     #mobile-menu__close--btn {
         transform: rotate(90deg);
+        opacity: 1;
         transition: all .5s;
+        transition-delay: .1s;
     }
 }
 
@@ -224,6 +232,11 @@
 
 /*Desktop*/
 @media only screen and (min-width: 1280px) {
+    .container {
+        height: 90px;
+        justify-content: flex-start;
+    }
+
     .hide {
         display: none;
     }
@@ -249,37 +262,68 @@
         }
     }
 
+    .logo-div {
+        width: fit-content;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: left;
+        padding: 0;
+        margin-left: 21vw;
+    }
+    
+    .logo-div:hover {
+        cursor: pointer;
+    }
+    
+    #large-title {
+        width: 210px;
+        display: block;
+        margin-left: 10px;
+
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    #btn-contact {
+        height: 50%;
+        width: fit-content;
+        display: block;
+        align-self: center;
+        padding: 0px 20px;
+
+        border: 1px solid var(--text-main);
+        border-radius: 7px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        background-color: transparent;
+        color: var(--text-main);
+        transition: .3s;
+    }
+    #btn-contact:hover {
+        cursor: pointer;
+
+        background-color: var(--text-main);
+        color: var(--bg-secondary);
+        transition: .3s;
+    }
+
     .btn-div {
         height: 100%;
-        width: 90%;
+        width: fit-content;
         display: flex;
-        justify-content: left;
-        padding-left: 4%;
-
-        &__left {
-            display: flex;
-            justify-content: right;
-            padding-right: 4%;
-            padding-left: 0;
-
-            color: var(--text-main);
-        }
-        
-        #btn-news {
-            margin-left: 10%;
-        }
-        #btn-about {
-            margin-right: 10%;
-        }
+        padding-left: 5%;
+        margin-left: 3.5%;
+        margin-right: 10vw;
 
         &__btn {
-            height: 80%;
-            width: 25%;
-            margin-top: auto;
+            height: 100%;
+            width: fit-content;
+            margin-right:  30px;
 
             font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-weight: 300;
+            text-transform: capitalize;
             border: none;
             color: var(--text-main);
             background-color: transparent;
@@ -287,101 +331,60 @@
             
         }
     }
-    .btn-div__btn:hover {
+    .btn-div__btn:hover, .logo-div:hover {
         cursor: pointer;
         border-bottom: 1px solid var(--text-main);
     }
-
-    #btn-home.active {        
-        border-bottom: 1px solid var(--text-main);
+    #logo-div.active {       
+        border-bottom: 2px solid var(--text-main);
     }
-    #btn-news.active {        
-        border-bottom: 1px solid var(--text-main);
+    #btn-news.active {       
+        border-bottom: 2px solid var(--text-main);
     }
-    #btn-about.active {        
-        border-bottom: 1px solid var(--text-main);
+    #btn-about.active {       
+        border-bottom: 2px solid var(--text-main);
     }
-    #btn-contact.active {        
-        border-bottom: 1px solid var(--text-main);
-    }
-    
-    #large-title {
-        position: absolute;
-        width: 410px;
-        display: block;
-        top: 1%;
-
-        font-weight: 700;
-        opacity: 0;
-        transition: all .4s;
+    #btn-contact.active{        
+        border-bottom: 2px solid var(--text-main);
     }
 
     #hide {
         display: none;
     }
 
-    .logo-div {
-        width: 5%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /*Turn logo into brand name when hover*/
-    .logo-div:hover {
-        cursor: pointer;
-        width: 70%;
-
-        transition: width .4s;
-
-        #logo {
-            transform: scale(0);
-            opacity: 0;
-            transition: transform .5s, opacity .4s;
-        }
-        #large-title {
-            font-size: 1.3rem;
-
-            opacity: 1;
-            transition: all .4s;
-        }
-    }
+    
 }
 
 @media only screen and (min-width: 1600px) {
     #large-title {
-        top: 0.2%;
+        // top: 0.2%;
     }
 
     .btn-div {
 
         &__btn {
-            width: 24%;
+            // width: 24%;
         }
     }
 }
 
 @media only screen and (min-width: 1920px) {
-    
-    .logo-div:hover {
-        cursor: pointer;
-        width: 20%;
-    }
 
 
     #large-title {
         top: 5%;
     }
 
-    .btn-div {
-        width: 40%;
-        margin-left: 0%;
+    // .btn-div {
+    //     width: 40%;
+    //     margin-left: 0%;
 
-        &__left {
-            margin-right: 0%;
-        }
+    //     &__left {
+    //         margin-right: 0%;
+    //     }
 
-        &__btn {
-            width: 24%;
-        }
-    }
+    //     &__btn {
+    //         width: 24%;
+    //     }
+    // }
 }
