@@ -6,18 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit{
   ngOnInit(): void {
-    // this.BackToTop();
     document.addEventListener("scroll", (e) => {this.ScrollWindow()});
     this.ScrollWindow();
-
-    // let cursor = document.getElementById("circle");
-    // document.addEventListener('mousemove', function(e) {
-    //   let x = e.clientX;
-    //   let y = e.clientY;
-
-    //   cursor!.style.left = x + "px";
-    //   cursor!.style.top = y + "px";
-    // });
   }
 
   constructor() {
@@ -85,7 +75,6 @@ export class HomeComponent implements OnInit{
   protected MobileMenu(state: string) {
     let top_btn = document.getElementById('to-top');
     let to_about = document.getElementById('scroll-indicator');
-    // console.log(state);
     
 
     if(state === 'open' && this.curr_scroll_pos < 200) {

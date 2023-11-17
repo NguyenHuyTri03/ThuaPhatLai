@@ -8,11 +8,11 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    z-index: 99999999999;
 
-    font-family: 'Gabarito';
     color: black;
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    background-color: var(--text-main);
+    color: var(--bg-secondary);
     box-shadow: 1px 0px 19px -3px rgba(0,0,0,0.72);
     transition: all .5s;
 }
@@ -87,7 +87,7 @@
         flex-direction: column;
         justify-content: center;
         width: 60vw;
-        height: 70vh;
+        height: 50vh;
         margin: 10% 0%;
         padding: 0;
 
@@ -95,9 +95,9 @@
         transition: all .5s;
 
         &__btn {
-            margin: 10% 0;
+            margin: 12% 0;
             padding: 0;
-    
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             text-transform: capitalize;
             font-size: 1.4rem;
@@ -234,7 +234,7 @@
 @media only screen and (min-width: 1280px) {
     .container {
         height: 90px;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 
     .hide {
@@ -265,10 +265,9 @@
     .logo-div {
         width: fit-content;
         align-items: center;
-        justify-content: flex-end;
         text-align: left;
         padding: 0;
-        margin-left: 21vw;
+        margin-left: 30px;
     }
     
     .logo-div:hover {
@@ -280,8 +279,9 @@
         display: block;
         margin-left: 10px;
 
+        font-family: 'Montserrat', sans-serif;
         font-size: 1.3rem;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     #btn-contact {
@@ -291,20 +291,21 @@
         align-self: center;
         padding: 0px 20px;
 
-        border: 1px solid var(--text-main);
+        border: 1px solid var(--bg-main);
         border-radius: 7px;
+        font-family: 'Montserrat', sans-serif;
         font-size: 1.1rem;
         font-weight: 500;
         text-transform: capitalize;
         background-color: transparent;
-        color: var(--text-main);
+        color: var(--bg-main);
         transition: .3s;
     }
     #btn-contact:hover {
         cursor: pointer;
 
-        background-color: var(--text-main);
-        color: var(--bg-secondary);
+        background-color: var(--bg-main);
+        color: var(--text-main);
         transition: .3s;
     }
 
@@ -314,77 +315,47 @@
         display: flex;
         padding-left: 5%;
         margin-left: 3.5%;
-        margin-right: 10vw;
+        margin-right: 30px;
 
         &__btn {
             height: 100%;
             width: fit-content;
             margin-right:  30px;
 
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
-            font-weight: 300;
+            font-weight: 500;            
             text-transform: capitalize;
             border: none;
-            color: var(--text-main);
+            color: var(--bg-secondary);
             background-color: transparent;
             transition: all .3s;
             
         }
     }
-    .btn-div__btn:hover, .logo-div:hover {
+    .btn-div__btn:hover {
         cursor: pointer;
-        border-bottom: 1px solid var(--text-main);
+        border-bottom: 1px solid var(--bg-main);
     }
-    #logo-div.active {       
-        border-bottom: 2px solid var(--text-main);
+    #btn-home.active {       
+        border-bottom: 2px solid var(--bg-main);
     }
     #btn-news.active {       
-        border-bottom: 2px solid var(--text-main);
+        border-bottom: 2px solid var(--bg-main);
     }
     #btn-about.active {       
-        border-bottom: 2px solid var(--text-main);
-    }
-    #btn-contact.active{        
-        border-bottom: 2px solid var(--text-main);
+        border-bottom: 2px solid var(--bg-main);
     }
 
     #hide {
         display: none;
-    }
-
-    
+    }    
 }
 
 @media only screen and (min-width: 1600px) {
-    #large-title {
-        // top: 0.2%;
-    }
 
-    .btn-div {
-
-        &__btn {
-            // width: 24%;
-        }
-    }
 }
 
 @media only screen and (min-width: 1920px) {
 
-
-    #large-title {
-        top: 5%;
-    }
-
-    // .btn-div {
-    //     width: 40%;
-    //     margin-left: 0%;
-
-    //     &__left {
-    //         margin-right: 0%;
-    //     }
-
-    //     &__btn {
-    //         width: 24%;
-    //     }
-    // }
 }

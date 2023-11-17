@@ -63,14 +63,14 @@ export class TopnavComponent implements OnInit, OnChanges{
     } else if (route === 'news') {
       this.router.navigate(['/news']);
     } else if (route === 'about') {
-      this.router.navigate(['/about']);
+      this.router.navigate(['/services']);
     } else if (route === 'contact') {
       this.router.navigate(['/contact']);
     }
   }
 
   private BtnFocus() {
-    let btn_home = document.getElementById("logo-div");
+    let btn_home = document.getElementById("btn-home");
     let btn_news = document.getElementById("btn-news");
     let btn_about = document.getElementById("btn-about");
     let btn_contact = document.getElementById("btn-contact");

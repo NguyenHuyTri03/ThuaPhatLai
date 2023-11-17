@@ -2,7 +2,7 @@
 html {
     --bg-main: #e73c37;
     --bg-secondary: #312c38;
-    --text-main: #f7efe7;
+    --text-main: #ffff;
     --text-secondary: #bfb0a0;
 
     height: 100%;
@@ -10,6 +10,7 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: scroll;
 
     // cursor: none;
     background-color: var(--text-main);
