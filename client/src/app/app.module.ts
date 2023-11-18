@@ -8,6 +8,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { SharedModule } from './shared/shared.module';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ServicesComponent,
     NewsComponent,
     ContactComponent,
-  ],
+    FaqComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

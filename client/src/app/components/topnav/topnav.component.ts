@@ -46,7 +46,7 @@ export class TopnavComponent implements OnInit, OnChanges{
   /*Change nav behavior on scroll */
   private NavScroll(curr: number, prev: number) {
     let container = document.getElementById("container");
-    if(curr >= 200 && curr > prev) {
+    if(curr >= 100 && curr > prev) {
       if(!container!.classList.contains("scrolled")) {
         container!.classList.add("scrolled");
       }
@@ -66,6 +66,8 @@ export class TopnavComponent implements OnInit, OnChanges{
       this.router.navigate(['/services']);
     } else if (route === 'contact') {
       this.router.navigate(['/contact']);
+    } else if(route === 'faq') {
+      this.router.navigate(['/faq']);
     }
   }
 
@@ -74,30 +76,41 @@ export class TopnavComponent implements OnInit, OnChanges{
     let btn_news = document.getElementById("btn-news");
     let btn_about = document.getElementById("btn-about");
     let btn_contact = document.getElementById("btn-contact");
+    let btn_faq = document.getElementById("btn-faq");
 
     if(this.router.url === '/home') {
       btn_home!.classList.add("active");
       btn_news!.classList.remove("active");
       btn_about!.classList.remove("active");
       btn_contact!.classList.remove("active");
+      btn_faq!.classList.remove("active");
 
     } else if (this.router.url === '/news') {      
       btn_home!.classList.remove("active");
       btn_news!.classList.add("active");
       btn_about!.classList.remove("active");
       btn_contact!.classList.remove("active");
+      btn_faq!.classList.remove("active");
 
-    } else if (this.router.url === '/about') {
+    } else if (this.router.url === '/services') {
       btn_home!.classList.remove("active");
       btn_news!.classList.remove("active");
       btn_about!.classList.add("active");
       btn_contact!.classList.remove("active");
+      btn_faq!.classList.remove("active");
 
     } else if (this.router.url === '/contact') {
       btn_home!.classList.remove("active");
       btn_news!.classList.remove("active");
       btn_about!.classList.remove("active");
       btn_contact!.classList.add("active");
+      btn_faq!.classList.remove("active");
+    } else if (this.router.url === '/faq') {
+      btn_home!.classList.remove("active");
+      btn_news!.classList.remove("active");
+      btn_about!.classList.remove("active");
+      btn_contact!.classList.remove("active");
+      btn_faq!.classList.add("active");
     }
   }
 }

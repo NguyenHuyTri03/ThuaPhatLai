@@ -1,2 +1,21 @@
-<app-topnav (mobile_menu)="MobileMenu($event)" [scroll_pos]="curr_scroll_pos"></app-topnav>
+<app-topnav></app-topnav>
 
+<div class="hero">
+    <h1>Dịch vụ</h1>
+    <p id="title">Với phạm vi hoạt động đa dạng, Văn phòng Thừa phát lại Quận 6 cam kết đem đến cho khách hàng những trải nghiệm tốt nhất</p>
+</div>
+
+<div class="services">
+    <div class="service-accordion" *ngFor="let service of services" (click)="ExpandDetail(service.id)">
+        <img src={{service.img}} alt="thihanh">
+        <label class="item-title">{{service.title}}</label>
+        <div class="learn-more-btn">
+            <p [id]="'expand-stat' + service.id">Đọc thêm</p>  
+            <i class="fa-solid fa-angle-down fa-lg" [id]="'expand' + service.id"></i>
+        </div>        
+
+        <p [id]="'expand-detail' + service.id">{{service.des}}</p>
+    </div>
+</div>
+
+<button (click)="BackToTop()" id="to-top"><i id="up-arrow" class="fa-solid fa-chevron-up fa-xl"></i></button>

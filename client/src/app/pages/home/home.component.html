@@ -1,39 +1,36 @@
-<app-topnav (mobile_menu)="MobileMenu($event)" [scroll_pos]="curr_scroll_pos"></app-topnav>
+<app-topnav></app-topnav>
 
 
 <div class="hero grid-1col">
     <h1>Văn phòng thừa phát lại quận 6</h1>
     <!-- <p></p> -->
-    <button >Liên hệ ngay  <span><i class="fa-solid fa-angle-right"></i></span></button>
+    <button >Liên hệ ngay  <span><i class="fa-solid fa-angle-right arrow-right"></i></span></button>
 </div>
 
 <div class="services">
     <h1>Dịch vụ</h1>
     <div class="services__details">
-        <div class="vibang">
+        <div class="vibang details-div">
             <img src="https://drive.google.com/uc?export=view&id=1omF1qsHhzpxrTFEv-QHl7vO864U5uzca" alt="vibang">
             <p class="item-title">Lập Vi Bằng</p>
-            <button class="learn-more-btn">Tìm hiểu thêm  <span><i class="fa-solid fa-angle-right"></i></span></button>
         </div>
 
-        <div class="tongdat">
+        <div class="tongdat details-div">
             <img src="https://drive.google.com/uc?export=view&id=1Zw7rpu0G4oKaLL7JfP4Bsdr7pnKaDUev" alt="tongdat">
             <p class="item-title">Tống đạt văn bảng</p>
-            <button class="learn-more-btn">Tìm hiểu thêm  <span><i class="fa-solid fa-angle-right"></i></span></button>
         </div>
 
-        <div class="dkthihanh">
+        <div class="dkthihanh details-div">
             <img src="https://drive.google.com/uc?export=view&id=1rxL18xlVBuS3uDqdeWTtjLhsDAXS69Sl" alt="dkthihanh">
             <p class="item-title">Xác minh điều kiện Thi hành án</p>
-            <button class="learn-more-btn">Tìm hiểu thêm  <span><i class="fa-solid fa-angle-right"></i></span></button>
         </div>
 
-        <div class="thihanh">
+        <div class="thihanh details-div">
             <img src="https://drive.google.com/uc?export=view&id=12uv4qB_mTmS8GFSbEfMv-IPDm1ZbAHej" alt="thihanh">
             <p class="item-title">Thi hành án</p>
-            <button class="learn-more-btn">Tìm hiểu thêm  <span><i class="fa-solid fa-angle-right"></i></span></button>
         </div>
     </div>
+    <button class="learn-more-btn" [routerLink]="['/services']">Tìm hiểu thêm</button>
 </div>
 
 <div class="news">

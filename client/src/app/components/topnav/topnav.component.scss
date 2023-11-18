@@ -166,28 +166,6 @@
     transition-delay: .13s;
 }
 
-#container.scrolled {
-    height: 50px;
-
-    background-color: rgba(49, 44, 56, .5);
-    box-shadow: none;
-    backdrop-filter: blur(6px);
-    transition: all .5s;
-
-    #logo {
-        height: 40px;
-        width: 40px;
-
-        transition: all .4s;
-    }
-
-    #menu-btn {
-        opacity: 0;
-
-        transition: all .3s;
-    }
-}
-
 
 
 /*Tablets*/
@@ -247,19 +225,6 @@
 
     .mobile-menu {
         display: none;
-    }
-    
-    #container.scrolled {        
-        .btn-div__btn {
-            font-size: .9rem;
-
-            transition: all .4s;
-        }
-    }
-    #container.scrolled:hover {
-        .logo-div {
-            pointer-events: none;
-        }
     }
 
     .logo-div {
@@ -337,13 +302,7 @@
         cursor: pointer;
         border-bottom: 1px solid var(--bg-main);
     }
-    #btn-home.active {       
-        border-bottom: 2px solid var(--bg-main);
-    }
-    #btn-news.active {       
-        border-bottom: 2px solid var(--bg-main);
-    }
-    #btn-about.active {       
+    #btn-home.active, #btn-about.active, #btn-news.active, #btn-faq.active {       
         border-bottom: 2px solid var(--bg-main);
     }
 

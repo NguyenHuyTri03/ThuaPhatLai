@@ -19,6 +19,11 @@ const routes: Routes = [
   { path: 'contact', loadChildren: () => 
     import('../app/pages/contact/contact.module').then((x) => x.ContactModule),
   },
+  
+  {
+    path: 'faq', loadChildren: () =>
+    import('../app/pages/faq/faq.module').then((x) => x.FaqModule),
+  },  
 ];
 
 @NgModule({
