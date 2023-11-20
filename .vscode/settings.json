@@ -1,0 +1,9 @@
+{
+    "angular-schematics.angularDisableProjectPathCheck": true,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "style": "scss"
+        }
+    },
+    "angular-schematics.angularForceNgModules": true
+}

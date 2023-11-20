@@ -18,7 +18,7 @@ export class ServicesComponent implements OnInit {
       des:"Lập vi bằng làm chứng cứ, căn cứ để thực hiện các giao dịch khác theo yêu cầu của cá nhân, cơ quan, tổ chức."
     }, {
       id:"td",
-      title:"Tống đạt văn bảng",
+      title:"Tống đạt văn bản",
       img:"https://drive.google.com/uc?export=view&id=1Zw7rpu0G4oKaLL7JfP4Bsdr7pnKaDUev",
       des:"Tống đạt các văn bản của Cơ quan thi hành án dân sự thành phố Hồ Chí Minh, Cơ quan thi hành án dân sự quận, huyện tại thành phố Hồ Chí Minh; Tòa án nhân dân thành phố Hồ Chí Minh và các Tòa án nhân dân quận, huyện tại thành phố Hồ Chí Minh."
     }, {

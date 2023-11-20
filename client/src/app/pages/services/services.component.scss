@@ -133,12 +133,13 @@
 }
 
 
-#expand {
+
+#expandvb, #expandtd, #expanddk, #expandth {
     transform: rotate(0deg);
     transition: .5s;
 }
 
-#expand.open, #expand.open, #expand.open, #expand.open {                
+#expandvb.open, #expandtd.open, #expanddk.open, #expandth.open {                
     transform: rotate(-180deg);
     transition: .5s;
 }
@@ -151,7 +152,7 @@
 }
 
 #expand-detailtd.open, #expand-detailth.open {
-    height: 80px;
+    height: 100px;
 
     opacity: 1;
     transition: height .5s ease-in-out, opacity 1s ease-in-out;
