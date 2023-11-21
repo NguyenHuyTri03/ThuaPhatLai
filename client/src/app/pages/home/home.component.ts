@@ -17,6 +17,15 @@ export class HomeComponent implements OnInit{
 
   protected scroll_pos = 0;
 
+  //get page state to toggle fade in/out
+  protected FadePage(event: string) {
+    if(event == 'open') {
+      document.getElementById("fade-in-out")!.classList.add("fadein");
+    } else {
+      document.getElementById("fade-in-out")!.classList.remove("fadeout");
+    }
+  }
+
   //Update scroll to fade back-to-top btn when reach >200
   private ScrollWindow() {
     this.scroll_pos = window.scrollY;

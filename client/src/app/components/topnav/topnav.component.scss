@@ -1,3 +1,39 @@
+
+
+#fade {
+    position: absolute;
+    top: 0; 
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    opacity: 0;
+    background-color: white;
+}
+#fade.goin {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+        z-index: 999;
+    } to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 0;
+        z-index: 99;
+    } to {
+        opacity: 1;
+        // z-index: -1;
+    }
+}
+
 .container {
     position: fixed;
     top: 0;
@@ -10,7 +46,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    z-index: 99999999999;
+    z-index: 9;
 
     color: black;
     background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,.8), rgba(255,255,255, 0.2));
@@ -37,13 +73,14 @@
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
+
     align-items: center;
     padding: 0;
 
     #mlogo {
-        margin-left: 20px;
+        margin: 0 auto;
     }
     #menu-btn {
         margin-right: 30px;
@@ -209,7 +246,7 @@
 /*Desktop*/
 @media only screen and (min-width: 1280px) {
     .container {
-        height: 120px;
+        height: 140px;
     }
 
     .mobile-menu {
@@ -226,8 +263,8 @@
         justify-content: center;
 
         #plogo {
-            height: 50px;
-            width: 50px;
+            height: 55px;
+            width: 55px;
         }
     }
     
@@ -241,43 +278,18 @@
         font-weight: 600;
     }
 
-    #btn-contact {
-        height: 50%;
-        width: fit-content;
-        display: block;
-        align-self: center;
-        padding: 0px 20px;
-
-        border: 1px solid var(--bg-main);
-        border-radius: 7px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-transform: capitalize;
-        background-color: transparent;
-        color: var(--bg-main);
-        transition: .3s;
-    }
-    #btn-contact:hover {
-        cursor: pointer;
-
-        background-color: var(--bg-main);
-        color: var(--text-main);
-        transition: .3s;
-    }
-
     .btn-div {
         height: 100%;
         width: fit-content;
         display: flex;
-        padding-left: 5%;
-        margin-left: 3.5%;
-        margin-right: 30px;
+        justify-content: space-between;
+
+        // background-color: beige;
 
         &__btn {
             height: 100%;
             width: fit-content;
-            margin-right:  30px;
+            margin: 0 20px;
 
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
@@ -286,14 +298,13 @@
             border: none;
             color: var(--bg-secondary);
             background-color: transparent;
-            transition: all .3s;            
         }
     }
     .btn-div__btn:hover {
         cursor: pointer;
-        border-bottom: 1px solid var(--bg-main);
+        border-bottom: 2px solid var(--bg-main);
     }
-    #btn-home.active, #btn-about.active, #btn-news.active, #btn-faq.active {       
+    .active {
         border-bottom: 2px solid var(--bg-main);
     }
 }

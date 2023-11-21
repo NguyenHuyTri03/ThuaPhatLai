@@ -1,6 +1,9 @@
+<div id="fade"></div>
+
 <div class="container" id="container">
     <!-- only shows in mobile -->
     <div class="mobile-nav" id="mobile-nav">
+        <i class="fa-solid fa-bars fa-xl" style="visibility: hidden; margin-left: 30px;"></i>
         <img id="mlogo" src="../../../favicon.ico" alt="logo" style="height: 60px; width: 60px;">
         <i id="menu-btn" class="fa-solid fa-bars fa-xl" (click)="ToggleMobileMenu('open')"></i>
     </div>
@@ -12,11 +15,11 @@
     </div>
 
     <div class="btn-div">
-        <button id="btn-home" class="btn-div__btn" (click)="WebRouting('home')">Trang chủ</button>
-        <button id="btn-about" class="btn-div__btn" (click)="WebRouting('about')">Dịch vụ</button> 
-        <button id="btn-news" class="btn-div__btn" (click)="WebRouting('news')">Tin tức</button>
-        <button id="btn-faq" class="btn-div__btn" (click)="WebRouting('faq')">Hỏi Đáp</button>
-        <button id="btn-contact" class="btn-div__btn" (click)="WebRouting('contact')">liên hệ</button>
+        <button id="home" class="btn-div__btn" (click)="WebRouting('home')">Trang chủ</button>
+        <button id="services" class="btn-div__btn" (click)="WebRouting('services')">Dịch vụ</button> 
+        <button id="news" class="btn-div__btn" (click)="WebRouting('news')">Tin tức</button>
+        <button id="faq" class="btn-div__btn" (click)="WebRouting('faq')">Hỏi Đáp</button>
+        <button id="contact" class="btn-div__btn" (click)="WebRouting('contact')">liên hệ</button>
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
@@ -33,4 +36,3 @@
         </div>
     </div>
 </div>
-<!-- <div id="fade"></div> -->
