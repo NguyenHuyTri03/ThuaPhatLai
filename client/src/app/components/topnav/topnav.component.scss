@@ -209,41 +209,35 @@
 /*Desktop*/
 @media only screen and (min-width: 1280px) {
     .container {
-        height: 90px;
-        justify-content: space-between;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    #menu-btn {
-        display: none;
+        height: 120px;
     }
 
     .mobile-menu {
         display: none;
     }
-
-    .nav-menu {
-        width: fit-content;
-        align-items: center;
-        text-align: left;
-        padding: 0;
-        margin-left: 30px;
+    .mobile-nav {
+        display: none;
     }
-    
-    .nav-menu:hover {
-        cursor: pointer;
+
+    .logo-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        #plogo {
+            height: 50px;
+            width: 50px;
+        }
     }
     
     #large-title {
-        width: 210px;
+        width: fit-content;
         display: block;
         margin-left: 10px;
 
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 600;
     }
 
@@ -292,8 +286,7 @@
             border: none;
             color: var(--bg-secondary);
             background-color: transparent;
-            transition: all .3s;
-            
+            transition: all .3s;            
         }
     }
     .btn-div__btn:hover {
@@ -303,10 +296,6 @@
     #btn-home.active, #btn-about.active, #btn-news.active, #btn-faq.active {       
         border-bottom: 2px solid var(--bg-main);
     }
-
-    #hide {
-        display: none;
-    }    
 }
 
 @media only screen and (min-width: 1600px) {
