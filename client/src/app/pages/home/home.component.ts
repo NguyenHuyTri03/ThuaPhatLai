@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit{
   }
 
 
-  protected curr_scroll_pos = 0;
+  protected scroll_pos = 0;
 
   //Update scroll to fade back-to-top btn when reach >200
   private ScrollWindow() {
-    this.curr_scroll_pos = window.scrollY;
+    this.scroll_pos = window.scrollY;
     let top_btn = document.getElementById('to-top');
 
     if(window.scrollY > 200) {      

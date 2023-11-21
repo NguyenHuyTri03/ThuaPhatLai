@@ -45,7 +45,7 @@ export class TopnavComponent implements OnInit, OnChanges{
 
   /*Change nav behavior on scroll */
   private NavScroll(curr: number, prev: number) {
-    let container = document.getElementById("container");
+    let container = document.getElementById("logo-div");
     if(curr >= 100 && curr > prev) {
       if(!container!.classList.contains("scrolled")) {
         container!.classList.add("scrolled");
