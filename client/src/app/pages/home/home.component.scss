@@ -5,8 +5,8 @@
 
 #to-top {
     position: fixed;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     right: 6%;
     bottom: 3%;
 
@@ -15,10 +15,10 @@
     text-decoration: none;
     color: var(--text-main);
     background-color: var(--bg-main);
-    // border: none;    
-    border: 1px solid var(--text-main);
+    border: none;
+    // border: 1px solid var(--text-main);
     z-index: 99;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.22);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.3);
     transition: all .3s;
 
     #up-arrow {
@@ -59,60 +59,80 @@
 }
 
 .hero {
-    height: 50%;
-    width: 100%;    
-    padding: 200px 0px;
+    position: relative;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 3;
 
-    font-family: 'Montserrat', sans-serif;
     color: var(--bg-secondary);
-    background-color: rgba(255, 255, 255);
-    // background-image: url("https://drive.google.com/uc?export=view&id=1UJ2Rpuhbio3dj39mGu1VpAuDXNRFZxPX");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-blend-mode: multiply;
+
+    &__title {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 2;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255, 0));
 
 
-
-    >h1 {
-        padding: 0 20px;
-        align-self: center;
-
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-align: left;
+        >h1 {
+            margin-top: 100px;
+    
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--bg-secondary);
+            text-transform: uppercase;
+            text-align: center;
+        }
+        >button {
+            height: 50px;
+            width: fit-content;
+            align-self: center;
+            padding: 0 20px;
+            margin-top: 30px;
+    
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-main);
+            border: none;
+            border-radius: 10px;
+            background-color: var(--bg-main);
+        }
     }
-    >button {
-        height: 55px;
-        width: fit-content;
-        padding: 0 20px;
-        margin-left: 20px;
-        margin-top: 20px;
 
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: var(--text-main);
-        border: none;
-        border-radius: 40px;
-        background-color: var(--bg-main);
+    .size-large {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        background-image: url("../../../assets/RE50CFL_1920x1080.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
     }
 }
 
 .about-overview {
     width: 100vw;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     overflow: hidden;
 
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--text-main);
     
     &__title {
         padding: 0 20px;
 
         >h1 {
+            font-family: 'Montserrat', sans-serif;
             padding-bottom: 10px;
             text-transform: uppercase;
 
@@ -121,6 +141,7 @@
         }
 
         >h2 {
+            font-family: 'Montserrat', sans-serif;
             text-transform: capitalize;
             text-wrap: balance;
             color: var(--bg-main);
@@ -132,16 +153,16 @@
         height: 2px;
         width: 40px;
         margin: 20px 0;
-        margin-left: 30px;
+        margin-left: 20px;
 
+        border: none;
         background-color: var(--bg-main);
         color: var(--bg-main);
     }
 
     &__content {
         margin: 0;
-        padding: 0;
-        padding: 0 30px;
+        padding: 0 20px;
 
         color: var(--bg-secondary);
 
@@ -154,49 +175,141 @@
     }
 }
 
+.section-break {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .round-break {
+        height: 15px;
+        width: 15px;
+        margin: 0 10px;
+
+        border: none;
+        border-radius: 50%;
+        background-color: var(--text-secondary); 
+    }
+
+    >hr {
+        height: 2px;
+        width: 20%;
+        border: none;
+
+        background-color: var(--text-secondary); 
+    }
+}
+
 .services {
     height: fit-content;
     width: 100%;
-    padding-top: 70px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 70px;
     z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-main);
+    background-color: var(--text-main);
 
-
-    &__details {        
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        justify-items: center;
+    .pc-service {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 4rem;
+    }
 
-        text-align: center;
+    &__title {
+        margin: 0 20px;
+        margin-bottom: 50px;
 
-        .details-div {
+        >p {
+            margin-bottom: 10px;
 
-            >p {
-                color: var(--text-main);
-            }
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: var(--bg-secondary);
+        }
 
-            >img {
-                border-radius: 10px;
-            }
+        >h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--bg-main);
+        }
+
+        >hr {
+            height: 2px;
+            width: 40px;
+            margin: 20px 0;
+    
+            border: none;
+            background-color: var(--bg-main);
+            color: var(--bg-main);
         }
     }
 
-    >h1 {
-        padding-bottom: 70px;
+    .accordion {
+        width: 90%;
+
+        list-style: none;
+    }
+
+    .accordion li {
+        width: 100%;
+        margin: 10px 0;
+
+        color: var(--bg-secondary);
+        background-color: var(--text-main);
+        border: none;
+    }
+
+    .accordion li label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+        margin-top: 15px;
+        cursor: pointer;
 
         font-family: 'Montserrat', sans-serif;
-        color: var(--text-main);
-        text-decoration: underline;
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .accordion li .accordion-content {        
+        margin: 0px 20px;
+        margin-left: 40px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .accordion label + input[type="radio"] {
+        display: none;
+    }
+
+    .accordion .accordion-content {
+        max-height: 0;
+        padding: 5px;
+        line-height: 30px;
+        overflow: hidden;
+        transition: max-height .7s;
+    }
+
+    .accordion label + input[type="radio"]:checked + .accordion-content{
+        max-height: 650px;
+        transition: max-height .7s;
+    }
+
+    .accordion hr {
+        height: 2px;
+
+        border: none;
+        background-color: var(--bg-main);
     }
 }
 
@@ -205,14 +318,16 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    margin: 70px auto;
+    margin: auto;
+    margin-top: 30px;
+    cursor: pointer;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
     border-radius: 10px;
-    border: 1px solid var(--text-main);
+    border: 1px solid var(--bg-main);
     background-color: var(--text-main);
     color: var(--bg-main);
     // border: none;
@@ -238,44 +353,20 @@
     }
 
     .hero {
-        >button {
-            margin-left: 50px;
-            margin-top: 0px;
-            transition: .3s;
-            
-            .arrow-right {
-                transform: translateX(0px);
-                transition: .3s;
+        &__title {
+            >h1 {
+                margin-top: 150px;
             }
-        }
-        >button:hover {
-            cursor: pointer;
-            
-            background-color: var(--text-main);
-            color: var(--bg-main);
-            transition: .3s;
-
-            .arrow-right {
-                transform: translateX(8px);
-                transition: .3s;
-            }
-        }
-        >h1 {
-            padding: 0 50px;
-            width: 600px;
         }
     }
 
     .services {
-
-        &__details {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 3rem;
+        &__title {
+            align-self: flex-start;
         }
 
-        >h1 {
-            padding-bottom: 40px;
+        .accordion {
+            width: 95%;
         }
     }
 }
@@ -283,86 +374,32 @@
 //PC
 @media only screen and (min-width: 1280px) {
     .hero {
-        padding-top: 250px;
-        
-        >button {
-            margin-left: 150px;
-            margin-top: 0px;
+        height: 100%;
+
+        &__title {
+            padding-top: 80px;
+            
+            >button {
+                margin-top: 40px;
+            }
+            >h1 {
+                // width: 100%;
+                padding: 0 150px;
+
+                font-size: 3.5rem;
+            }
         }
-        >h1 {
-            padding: 0 150px;
-            width: 600px;
+        .wrapper {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
         }
     }
 
     .about-overview {
-        padding-bottom: 300px;
-    }
-
-    .services {
-        height: 0;
-        width: 95%;
-        margin: auto auto;
-        padding: 480px 0;
-        padding-top: 20px;
-        margin-top: -15%;
-
-        background-color: var(--bg-main);
-        border-radius: 15px;
-
-        &__details {
-            padding-top: 40px;
-            padding-bottom: 2rem;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-gap: 1rem;
-        }
-
-        >h1 {
-            padding-bottom: 20px;
-        }
-    }
-
-    .fa-angle-right {
-        transition: .3s;
-    }
-
-    .learn-more-btn {
-        margin: 50px auto;
-        box-shadow: 0px 0px 15px 0px rgb(255, 255, 255, .75);
-        transform: translateX(0px) translateY(0px);
-        transition: .3s;
-
-        transform: translateX(0px);
-    }
-
-    .learn-more-btn:hover {
-        cursor: pointer;
-        box-shadow: 5px 5px 15px 0px rgb(255, 255, 255, .5);
-        transform: translateX(-5px) translateY(-5px);
-        transition: .3s;
-    }
-}
-
-@media only screen and (min-width: 1920px) {
-    .hero {
-        padding-top: 280px;
-    }
-
-    .services {
-        height: 0;
-        width: 95%;
-        margin: auto auto;
-        padding: 480px 0;
-        padding-top: 20px;
-        margin-top: -15%;
-    }
-
-    .about-overview {
-        padding-top: 110px;
+        padding-top: 150px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 10px 250px 250px;
+        grid-template-rows: 10px 250px;
         gap: 1rem;
 
         &__title {
@@ -381,9 +418,10 @@
 
         >hr {
             height: 2px;
-            width: 60px;
+            width: 100px;
             background-color: var(--bg-main);
             margin: 0;
+            grid-column-start: 2;
         }
     
         &__content {
@@ -393,7 +431,6 @@
             font-size: 1.2rem;
         }
     }
-
     .grid-col-span-2 {
         grid-column-start: 2;
         grid-row-start: 2;
@@ -401,5 +438,108 @@
     }
     .grid-row-span-2 {
         grid-row-start: 2;
+    }
+
+    .section-break {
+        .round-break {
+            display: none;
+        }
+
+        #hr1 {
+            display: none;
+        }
+
+        >hr {
+            height: 1px;
+            width: 100%;
+
+            // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 60%, rgba(255,255,255,1) 100%);
+            // box-shadow: 0px 15px 20px px rgba(0, 0, 0, .7);
+        }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: row;
+        padding-top: 200px;
+        padding-bottom: 0px;
+
+        .pc-service-img {
+            height: 800px;
+            width: 1200px;
+
+            border-top-right-radius: 15px;
+            background-image: url('../../../assets/Liam_Wong_Tokyo_Nights_Phone_Wallpapers_Cyberpunk_Blade_Runner_TOKYOO_TO_KY_OO_Japan_BookMinutes+To+Midnight.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pc-service {
+            // align-self: flex-end;
+        }
+
+        &__title {
+            margin: 0 30px;
+            margin-bottom: 50px;
+            
+            >p {
+                font-size: 2rem;
+            }
+
+            >h1 {
+                font-size: 2.5rem;
+            }
+        }   
+
+        .accordion li label {
+            font-size: 1.5rem;
+        }
+
+        .accordion li .accordion-content {
+            font-size: 1.2rem;
+        }
+    }
+
+    .fa-angle-right {
+        transition: .3s;
+    }
+
+    .learn-more-btn {
+        cursor: pointer;
+        margin: 0px auto;
+        margin-top: 50px;
+        transform: translateX(0px) translateY(0px);
+        transition: .3s;
+    }
+
+    .learn-more-btn:hover {
+        box-shadow: 5px 5px 15px 0px rgb(255, 255, 255, .5);
+        transform: translateX(-5px) translateY(-5px);
+        transition: .3s;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .hero {
+        &__title {
+            >button {
+                cursor: pointer;
+            }
+            >button span i {
+                transform: translateX(0px);
+                transition: .4s;
+            }
+
+            >button:hover span i {
+                transform: translateX(5px);
+                transition: .4s;
+            }
+        }
+    }
+
+    .services {
+        .pc-service-img {
+            width: 1500px;
+        }
     }
 }

@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit{
     this.scroll_pos = window.scrollY;
     let top_btn = document.getElementById('to-top');
 
-    if(window.scrollY > 200) {      
+    if(window.scrollY > 200) {
       top_btn!.classList.remove('fade');
     } else {
       top_btn!.classList.add('fade');

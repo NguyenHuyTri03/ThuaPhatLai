@@ -1,23 +1,48 @@
-<app-topnav></app-topnav>
+<app-topnav [scroll_pos]="scroll_pos"></app-topnav>
 
 <div class="hero">
     <h1>Dịch vụ</h1>
-    <p id="title">Với phạm vi hoạt động đa dạng, Văn phòng Thừa phát lại Quận 6 cam kết đem đến cho khách hàng những trải nghiệm tốt nhất</p>
+    <p id="title">Văn phòng Thừa phát lại Quận 6 cung cấp những dịch vụ Thừa phát lại tốt nhất</p>
+    <button [routerLink]="['/contact']">Liên hệ ngay  <span><i class="fa-solid fa-angle-right arrow-right"></i></span></button>
+    <div class="hero-img">a</div>
 </div>
 
-<div class="services">
-    <div class="service-accordion" *ngFor="let service of services" (click)="ExpandDetail(service.id)">
-        <img src={{service.img}} alt="thihanh">
-        <label class="item-title">{{service.title}}</label>
-        <div class="learn-more-btn">
-            <p [id]="'expand-stat' + service.id">Đọc thêm</p>  
-            <i class="fa-solid fa-angle-down fa-lg" [id]="'expand' + service.id"></i>
-        </div>        
-
-        <p [id]="'expand-detail' + service.id">{{service.des}}</p>
-    </div>
+<div class="services-selectors">
+    <ul class="services-list">
+        <li class="cells">
+            <div class="cell-icon vb-icon"></div>
+            <label>Lập vi bằng</label>
+            <div class="cell-detail">
+                <button class="cell-trigger" id="vb">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </li>
+        <li class="cells">
+            <div class="cell-icon td-icon"></div>
+            <label>Tống đạt văn bản</label>
+            <div>
+                <button class="cell-trigger" id="td">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </li>
+        <li class="cells">
+            <div class="cell-icon dk-icon"></div>
+            <label>Xác minh điều kiện thi hành án</label>
+            <div class="cell-detail">
+                <button class="cell-trigger" id="dk">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </li>
+        <li class="cells">
+            <div class="cell-icon th-icon"></div>
+            <label>Thi hành án</label>
+            <div class="cell-detail">
+                <button class="cell-trigger" id="th">Xem chi tiết <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </li>
+    </ul>
 </div>
 
+<div class="services-content">
+
+</div>
 
 
 <button (click)="BackToTop()" id="to-top"><i id="up-arrow" class="fa-solid fa-chevron-up fa-xl"></i></button>

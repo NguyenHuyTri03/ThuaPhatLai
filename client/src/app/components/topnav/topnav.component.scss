@@ -11,7 +11,7 @@
     background-color: white;
 }
 #fade.goin {
-    animation: fadein 2s;
+    // animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -110,7 +110,7 @@
         width: 100vw;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         text-align: center;
         margin-top: .8rem;
         margin-right: 1.5rem;
@@ -208,6 +208,8 @@
 
     #menu-btn {
         margin-right: 1rem;
+
+        font-size: 2rem;
     }
 
     /*Mobile menu*/
@@ -218,8 +220,12 @@
             margin-right: 2.5%;
         }
         
-        #mobile-menu__close--btn {
-            margin-right: 1rem;
+        #mobile-menu__close {
+            #mobile-menu__close--btn {
+                margin-right: 1rem;
+    
+                font-size: 3rem;
+            }
         }
 
         &__buttons {
@@ -247,6 +253,8 @@
 @media only screen and (min-width: 1280px) {
     .container {
         height: 140px;
+
+        transition: height .4s;
     }
 
     .mobile-menu {
@@ -265,17 +273,45 @@
         #plogo {
             height: 55px;
             width: 55px;
+
+            transition: all .4s;
         }
     }
     
     #large-title {
+        height: 20px;
         width: fit-content;
         display: block;
         margin-left: 10px;
 
         font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
+        opacity: 1;
+        font-size: 1.1rem;
         font-weight: 600;
+        transition: all .4s;
+    }
+
+    
+    #container.scrolled {
+        height: 115px;
+
+        transition: height .4s;
+    }
+
+    #logo-div.scrolled {
+        #plogo {
+            height: 40px;
+            width: 40px;
+            transition: all .4s;
+        }
+
+        #large-title {
+            height: 0;
+            opacity: 0;
+            display: none;
+            
+            transition: all .4s;
+        }
     }
 
     .btn-div {
@@ -285,6 +321,7 @@
         justify-content: space-between;
 
         // background-color: beige;
+        transition: height .4s;
 
         &__btn {
             height: 100%;
@@ -314,5 +351,25 @@
 }
 
 @media only screen and (min-width: 1920px) {
+    #container.scrolled {
+        height: 80px;
 
+        transition: height .4s;
+    }
+
+    #logo-div.scrolled {
+        #plogo {
+            height: 40px;
+            width: 40px;
+            transition: all .4s;
+        }
+
+        #large-title {
+            height: 0;
+            opacity: 0;
+            display: none;
+            
+            transition: all .4s;
+        }
+    }
 }

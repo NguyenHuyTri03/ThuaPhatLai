@@ -4,7 +4,7 @@
     <!-- only shows in mobile -->
     <div class="mobile-nav" id="mobile-nav">
         <i class="fa-solid fa-bars fa-xl" style="visibility: hidden; margin-left: 30px;"></i>
-        <img id="mlogo" src="../../../favicon.ico" alt="logo" style="height: 60px; width: 60px;">
+        <img (click)="WebRouting('home')" id="mlogo" src="../../../favicon.ico" alt="logo" style="height: 60px; width: 60px;">
         <i id="menu-btn" class="fa-solid fa-bars fa-xl" (click)="ToggleMobileMenu('open')"></i>
     </div>
 
@@ -29,7 +29,7 @@
 
         <div class="mobile-menu__buttons">
             <button class="mobile-menu__buttons__btn" (click)="WebRouting('home')">Trang chủ</button>
-            <button class="mobile-menu__buttons__btn" (click)="WebRouting('about')">Dịch vụ</button>
+            <button class="mobile-menu__buttons__btn" (click)="WebRouting('services')">Dịch vụ</button>
             <button class="mobile-menu__buttons__btn" (click)="WebRouting('news')">Tin tức</button>
             <button class="mobile-menu__buttons__btn" (click)="WebRouting('faq')">Hỏi Đáp</button>
             <button class="mobile-menu__buttons__btn" (click)="WebRouting('contact')">Liên hệ</button>
