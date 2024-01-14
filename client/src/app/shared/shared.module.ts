@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopnavComponent } from '../components/topnav/topnav.component';
 import { CopyrightComponent } from '../components/copyright/copyright.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,11 +13,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   imports: [
     CommonModule,
+    FormsModule,
   ],
   exports: [
     TopnavComponent,
     CopyrightComponent,
-    FontAwesomeModule,
   ]
 })
 export class SharedModule { }

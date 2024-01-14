@@ -4,18 +4,29 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit{  
+  protected scroll_pos = 0;
+  protected services:any = [];
+  protected user_email:string = "";
+  protected user_name:string = "";
+  protected user_prob:string = "";
+
+
+
   ngOnInit(): void {
     document.addEventListener("scroll", (e) => {this.ScrollWindow()});
-    this.ScrollWindow();
+    // this.ScrollWindow();
+
+    
   }
 
   constructor() {
-
+    fetch('assets/services.json')
+    .then((rep) => rep.json())
+    .then((data) => this.services = data);
   }
 
-
-  protected scroll_pos = 0;
+  
 
   //get page state to toggle fade in/out
   protected FadePage(event: string) {
@@ -54,7 +65,6 @@ export class HomeComponent implements OnInit{
         behavior: 'smooth',
       });
     } else if (window.innerWidth >= 1600) {
-      console.log("1600");
       window.scrollTo({
         top: 970,
         behavior: 'smooth',

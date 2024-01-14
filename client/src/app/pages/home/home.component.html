@@ -3,9 +3,28 @@
 <div class="hero grid-1col">
     <div class="hero__title">        
         <h1>Văn phòng thừa phát lại quận 6</h1>
+        <p>Đưa ra sự lựa chọn tốt nhất cho bạn và gia đình với những luật sư đáng tin cậy và giàu kinh nghiệm</p>
         <button [routerLink]="['/contact']">Liên hệ ngay  <span><i class="fa-solid fa-angle-right arrow-right"></i></span></button>
     </div>
     <div class="wrapper size-large"></div>    
+</div>
+
+<div class="services">
+
+    <div class="services__title">
+        <p>Dịch vụ</p>
+        <h1>Luôn hướng đến chất lượng cao nhất</h1>
+        <hr>
+    </div>
+
+    <div class="services__content">
+        <div class="service_card" *ngFor="let service of services">
+            <img src={{service.imgURL}}>
+            <h1 id="content_title">{{service.name}}</h1>
+        </div>
+    </div>
+    
+    <button class="learn-more-btn" [routerLink]="['/services']">Tìm hiểu thêm</button>
 </div>
 
 <div class="about-overview">
@@ -23,63 +42,6 @@
     </div>
 </div>
 
-<div class="section-break">
-    <hr id="hr1">
-    <div class="round-break"></div>
-    <hr>
-</div>
-
-<div class="services">
-    <div class="pc-service-img"></div>
-
-    <div class="pc-service">
-        <div class="services__title">
-            <p>Dịch vụ</p>
-            <h1>Luôn hướng đến chất lượng cao nhất</h1>
-            <!-- <hr> -->
-        </div>
-    
-        <ul class="accordion">
-            <hr>
-            <li>
-                <label for="first">Lập Vi Bằng <i class="fa-solid fa-angle-down fa-lg"></i></label>
-                <input type="radio" name="accordion-trigger" id="first" checked>
-                <div class="accordion-content">
-                    <p>Lập vi bằng làm chứng cứ, căn cứ để thực hiện các giao dịch khác theo yêu cầu của cá nhân, cơ quan, tổ chức.</p>
-                </div>
-            </li>
-            <hr>
-    
-            <li>
-                <label for="second">Tống đạt văn bản <i class="fa-solid fa-angle-down fa-lg"></i></label>
-                <input type="radio" name="accordion-trigger" id="second">
-                <div class="accordion-content">
-                    <p>Tống đạt các văn bản của Cơ quan thi hành án dân sự thành phố Hồ Chí Minh, Cơ quan thi hành án dân sự quận, huyện tại thành phố Hồ Chí Minh; Tòa án nhân dân thành phố Hồ Chí Minh và các Tòa án nhân dân quận, huyện tại thành phố Hồ Chí Minh.</p>
-                </div>
-            </li>
-            <hr>
-    
-            <li>
-                <label for="third">Xác minh điều kiện Thi hành án <i class="fa-solid fa-angle-down fa-lg"></i></label>
-                <input type="radio" name="accordion-trigger" id="third">
-                <div class="accordion-content">
-                    <p>Để làm cơ sở nộp đơn yêu cầu Thi hành án cho đương sự, Văn phòng Thừa phát lại Quận 6 thực hiện việc xác minh điều kiện Thi hành án cho các Bản án, Quyết định do Tòa án và cơ quan Thi hành án các cấp ở Tp. Hồ Chí Minh ban hành đối với tất cả các loại tài sản cần xác minh cả trong và ngoài khu vực Tp. Hồ Chí Minh bao gồm: bất động sản, động sản...</p>
-                </div>
-            </li>
-            <hr>
-    
-            <li>
-                <label for="fourth">Thi hành án <i class="fa-solid fa-angle-down fa-lg"></i></label>
-                <input type="radio" name="accordion-trigger" id="fourth">
-                <div class="accordion-content">
-                    <p>Thừa phát lại là người có đủ tiêu chuẩn được Nhà nước bổ nhiệm để xác minh điều kiện thi hành án dân sự, tổ chức thi hành án dân sự theo quy định của Nghị định này và pháp luật có liên quan.</p>
-                </div>
-            </li>
-            <hr>
-        </ul>
-        <button class="learn-more-btn" [routerLink]="['/services']">Tìm hiểu thêm</button>
-    </div>
-</div>
 
 <div class="news">
 
@@ -88,5 +50,30 @@
 <div class="faq">
     
 </div>
+
+<footer class="footer">
+    <div class="footer__icon">
+        <!-- <img> -->
+        a
+    </div>
+
+    <p>văn phòng Thừa phát lại Quận 6</p>
+    <div class="footer__nav">
+        <a href="/home">Trang chủ</a>
+        <a href="/services">Dịch vụ</a>
+        <a href="/news">Tin tức</a>
+        <a href="/faq">Hỏi đáp</a>
+        <a href="/contact">Liên hệ</a>
+    </div>
+
+    <div class="footer__info">
+        <h1>Email:</h1>
+        <input [(ngModel)]="user_email" type="text" placeholder="Nhập email">
+        <h1>Tên:</h1>
+        <input [(ngModel)]="user_name" type="text" placeholder="Nhập tên">
+        <h1>Vấn đề cần liên lạc:</h1>
+        <textarea [(ngModel)]="user_prob" type="textare" placeholder="Nhập vấn đề cần liên lạc" rows="4" cols="50"></textarea>
+    </div>
+</footer>
 
 <button (click)="BackToTop()" id="to-top"><i id="up-arrow" class="fa-solid fa-chevron-up fa-xl"></i></button>

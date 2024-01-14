@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Lập Vi Bằng",
+        "imgURL": "assets/typewritter.png",
+        "content": "Lập vi bằng làm chứng cứ, căn cứ để thực hiện các giao dịch khác theo yêu cầu của cá nhân, cơ quan, tổ chức.",
+        "webURL": ""
+    }, {
+        "name": "Tống đạt văn bản",
+        "imgURL": "assets/doc-suitcase.png",
+        "content": "Tống đạt các văn bản của Cơ quan thi hành án dân sự thành phố Hồ Chí Minh, Cơ quan thi hành án dân sự quận, huyện tại thành phố Hồ Chí Minh; Tòa án nhân dân thành phố Hồ Chí Minh và các Tòa án nhân dân quận, huyện tại thành phố Hồ Chí Minh.",
+        "webURL": ""
+    }, {
+        "name": "Xác minh điều kiện Thi hành án",
+        "imgURL": "assets/law-book.png",
+        "content": "Để làm cơ sở nộp đơn yêu cầu Thi hành án cho đương sự, Văn phòng Thừa phát lại Quận 6 thực hiện việc xác minh điều kiện Thi hành án cho các Bản án, Quyết định do Tòa án và cơ quan Thi hành án các cấp ở Tp. Hồ Chí Minh ban hành đối với tất cả các loại tài sản cần xác minh cả trong và ngoài khu vực Tp. Hồ Chí Minh bao gồm: bất động sản, động sản...",
+        "webURL": ""
+    }, {
+        "name": "Thi hành án",
+        "imgURL": "assets/judge.png",
+        "content": "Thừa phát lại là người có đủ tiêu chuẩn được Nhà nước bổ nhiệm để xác minh điều kiện thi hành án dân sự, tổ chức thi hành án dân sự theo quy định của Nghị định này và pháp luật có liên quan.",
+        "webURL": ""
+    }
+]

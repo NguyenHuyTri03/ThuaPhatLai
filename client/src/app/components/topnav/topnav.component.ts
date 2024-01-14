@@ -30,7 +30,7 @@ export class TopnavComponent implements OnInit, OnChanges{
 
     const btn_list = document.getElementsByClassName("btn-div__btn");
     for(let i = 0; i < btn_list.length; i++) {
-      console.log(btn_list[i].id);
+      // console.log(btn_list[i].id);
       if(btn_list[i].id == this.router.url.split("/")[1]) {
         btn_list[i].classList.add("active");
       } else {
